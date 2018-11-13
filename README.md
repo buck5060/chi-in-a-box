@@ -305,7 +305,7 @@ blazar-db-manage --config-file /etc/blazar/blazar.conf upgrade head
 
 5. Neutron service restart fail
     - Check log `/var/log/neutron/server.log`. 
-    - If `genericswitch:c2970G` exist in /etc/neutron/plugins/ml2/ml2_conf_genericswitch.ini and it does't match your configuration. Delete this lie and `systemctl restart neutron`
+    - If `genericswitch:c2970G` exist in /etc/neutron/plugins/ml2/ml2_conf_genericswitch.ini and it does't match your configuration. Delete this line and `systemctl restart neutron`
 
 6. No internet (or disconnect) when exec the puppet script
     - Check if public phyical NIC exist in `br-ex` using `sudo ovs-vsctl show`
